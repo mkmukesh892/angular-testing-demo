@@ -44,16 +44,16 @@ describe('UserDetailsComponent', () => {
     expect(component).toBeTruthy();
   });
   it('should redirect the user to the users page after save',()=>{
-    let router = TestBed.get(Router);
+    let router = TestBed.inject(Router);
     let spy = spyOn(router,'navigate');
     fixture.detectChanges();
     component.save();
     expect(spy).toHaveBeenCalledWith(['users']);
   });
   it('should navigate the user to the not found page when id is 0',()=>{
-    let router = TestBed.get(Router);
+    let router = TestBed.inject(Router);
     let spy = spyOn(router,'navigate');
-    let route: ActivatedRouteStub = TestBed.get(ActivatedRoute);
+    let route: ActivatedRouteStub = TestBed.inject(ActivatedRoute);
     route.push({id:0});
     expect(spy).toHaveBeenCalledWith(['not-found']);
   });
