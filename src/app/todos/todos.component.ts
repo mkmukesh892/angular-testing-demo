@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { TodoService } from './todo.service';
 @Component({
-  selector: 'app-todos',
-  templateUrl: './todos.component.html',
-  styleUrls: ['./todos.component.scss']
+    selector: 'app-todos',
+    templateUrl: './todos.component.html',
+    styleUrls: ['./todos.component.scss'],
+    standalone: false
 })
 export class TodosComponent implements OnInit {
 

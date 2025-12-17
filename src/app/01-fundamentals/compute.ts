@@ -1,5 +1,6 @@
-export function compute(number) {
-    if(number < 0)
+export function compute(num: number) {
+    if (num < 0) {
     return 0;
-    return number + 1;
+    }
+    return num + 1;
 }
