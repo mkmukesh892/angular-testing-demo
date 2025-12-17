@@ -1,9 +1,10 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'app-voter',
-  templateUrl: './voter.component.html',
-  styleUrls: ['./voter.component.scss']
+    selector: 'app-voter',
+    templateUrl: './voter.component.html',
+    styleUrls: ['./voter.component.scss'],
+    standalone: false
 })
 export class VoterComponent {
   @Input() othersVote = 0;

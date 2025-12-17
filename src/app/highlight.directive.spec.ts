@@ -3,10 +3,11 @@ import { Component } from '@angular/core';
 import { ComponentFixture, async, TestBed } from '@angular/core/testing';
 import {By} from '@angular/platform-browser';
 @Component({
-  template: `
+    template: `
   <p highlight="cyan">First</p>
   <p highlight>Second</p>
-  `
+  `,
+    standalone: false
 })
 class DirectiveHostComponent {
 
