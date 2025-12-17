@@ -1,3 +1,3 @@
-export function greet(name){
-    return 'welcome '+name +'!';
+export function greet(name) {
+    return 'welcome ' + name + '!';
 }
