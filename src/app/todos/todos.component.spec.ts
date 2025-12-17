@@ -2,18 +2,19 @@ import { async, ComponentFixture, TestBed, fakeAsync, tick } from '@angular/core
 
 import { TodosComponent } from './todos.component';
 import {TodoService} from './todo.service';
-import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { provideHttpClientTesting } from '@angular/common/http/testing';
 import { Observable } from 'rxjs';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 describe('TodosComponent', () => {
   let component: TodosComponent;
   let fixture: ComponentFixture<TodosComponent>;
   let service: TodoService;
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [HttpClientTestingModule],
-      declarations: [ TodosComponent ],
-      providers: [TodoService]
-    })
+    declarations: [TodosComponent],
+    imports: [],
+    providers: [TodoService, provideHttpClient(withInterceptorsFromDi()), provideHttpClientTesting()]
+})
     .compileComponents();
   }));
 
